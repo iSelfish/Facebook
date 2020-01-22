@@ -17,14 +17,10 @@ public class FacebookPage {
         return new FacebookPage();
     }
 
-    public FacebookPage textToInputEmail(String email) {
+    public FacebookPage login(String email, String pass) {
         WebElement inputEmailElement = Driver.getDriver().findElement(inputEmail);
-        inputEmailElement.sendKeys(email);
-        return new FacebookPage();
-    }
-
-    public FacebookPage textToInputPassword(String pass) {
         WebElement inputPasswordElement = Driver.getDriver().findElement(inputPassword);
+        inputEmailElement.sendKeys(email);
         inputPasswordElement.sendKeys(pass);
         return new FacebookPage();
     }

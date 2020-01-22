@@ -25,8 +25,7 @@ public class Test {
                 .textToSearchField()
                 .clickFacebookPage()
                 .verifyRedirect()
-                .textToInputEmail("badLogin")
-                .textToInputPassword("badPassword")
+                .login("badLogin", "badPassword")
                 .clickLoginButton()
                 .verifyAlertIsDisplayed();
     }
