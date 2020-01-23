@@ -1,7 +1,7 @@
 package facebook;
 
 import core.DriverManage;
-import facebook.PageObjects.StartPage;
+import pages.StartPage;
 import org.apache.log4j.BasicConfigurator;
 import org.junit.After;
 import org.junit.Before;

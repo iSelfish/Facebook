@@ -1,4 +1,4 @@
-package facebook.PageObjects;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

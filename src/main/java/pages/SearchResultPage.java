@@ -1,6 +1,7 @@
-package facebook.PageObjects;
+package pages;
 
 import org.openqa.selenium.By;
+import pages.FacebookPage;
 
 import static core.DriverManage.getDriver;
 

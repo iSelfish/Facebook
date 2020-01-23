@@ -1,4 +1,6 @@
-package facebook.PageObjects;
+package pages;
+
+import pages.GooglePage;
 
 import static core.DriverManage.getDriver;
 

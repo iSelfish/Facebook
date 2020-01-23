@@ -1,4 +1,4 @@
-package facebook.PageObjects;
+package pages;
 
 import static org.junit.Assert.assertTrue;
 import static core.DriverManage.getDriver;
