@@ -1,10 +1,10 @@
 package facebook.PageObjects;
 
-import core.Driver;
+import static core.DriverManage.getDriver;
 
 public class StartPage {
     public GooglePage navigateTo(String url) {
-        Driver.getDriver().get(url);
+        getDriver().get(url);
         return new GooglePage();
     }
 }

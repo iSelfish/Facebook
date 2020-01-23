@@ -4,11 +4,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Driver {
+public class DriverManage {
     private static WebDriver driver;
 
-    private Driver() {
-        System.out.println("Driver()");
+    private DriverManage() {
     }
 
     public static WebDriver getDriver() {
@@ -16,7 +15,7 @@ public class Driver {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            System.out.println("getDriver()");
+            System.out.println("creating driver");
         }
         return driver;
     }
@@ -27,6 +26,6 @@ public class Driver {
             driver = null;
             System.out.println("driver was killed successfully");
         } else
-            System.out.println("null error at kill()");
+            System.out.println("null error at killing driver");
     }
 }

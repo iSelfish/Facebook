@@ -1,12 +1,13 @@
 package facebook;
 
-import core.Driver;
+import core.DriverManage;
 import facebook.PageObjects.StartPage;
 import org.apache.log4j.BasicConfigurator;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
-public class Test {
+public class FacebookTest {
     @Before
     public void basicConfigure() {
         BasicConfigurator.configure();
@@ -14,19 +15,19 @@ public class Test {
 
     @After
     public void killDriver() {
-        Driver.kill();
+        DriverManage.kill();
     }
 
-    @org.junit.Test
+    @Test
     public void firstTest() {
 
         new StartPage()
                 .navigateTo("https://www.google.com")
-                .textToSearchField()
+                .typeTextToSearchField("Facebook")
                 .clickFacebookPage()
-                .verifyRedirect()
+                .checkThatPageURLCorrect()
                 .login("badLogin", "badPassword")
                 .clickLoginButton()
-                .verifyAlertIsDisplayed();
+                .checkThatAlertIsCorrect();
     }
 }
