@@ -1,5 +1,5 @@
 package facebook;
-
+//main
 import core.DriverManage;
 import pages.StartPage;
 import org.apache.log4j.BasicConfigurator;
