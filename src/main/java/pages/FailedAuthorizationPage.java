@@ -10,7 +10,7 @@ public class FailedAuthorizationPage {
 
     public FailedAuthorizationPage checkThatAlertIsCorrect() {
         String alertText = getDriver().findElement(alertMessage).getText();
-        String expectedAlertTextUS = "Invalid username or password";
+        String expectedAlertTextUS = "The email or phone number you’ve entered doesn’t match any account.";
         String expectedAlertTextRUS = "Эл. адрес или номер телефона, который вы указали, не соответствует ни одному аккаунту.";
         assertTrue((alertText.contains(expectedAlertTextUS)) || (alertText.contains(expectedAlertTextRUS)));
         return new FailedAuthorizationPage();
