@@ -1,5 +1,5 @@
 package facebook;
-//main
+
 import core.DriverManage;
 import pages.StartPage;
 import org.apache.log4j.BasicConfigurator;
@@ -25,9 +25,9 @@ public class FacebookTest {
                 .navigateTo("https://www.google.com")
                 .typeTextToSearchField("Facebook")
                 .clickFacebookPage()
-                .checkThatPageURLCorrect()
+                .checkThatPageURLCorrect("https://www.facebook.com/")
                 .login("badLogin", "badPassword")
                 .clickLoginButton()
-                .checkThatAlertIsCorrect();
+                .checkThatAlertIsCorrect("The email or phone number you’ve entered doesn’t match any account.");
     }
 }

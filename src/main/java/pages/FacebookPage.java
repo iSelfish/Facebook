@@ -11,9 +11,9 @@ public class FacebookPage {
     private By inputPassword = By.id("pass");
     private By loginButton = By.xpath("//input[@data-testid='royal_login_button']");
 
-    public FacebookPage checkThatPageURLCorrect() {
+    public FacebookPage checkThatPageURLCorrect(String expectedUrl) {
         String url = getDriver().getCurrentUrl();
-        assertEquals("https://www.facebook.com/", url);
+        assertEquals(expectedUrl, url);
         return new FacebookPage();
     }
 
