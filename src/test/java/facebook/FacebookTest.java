@@ -3,13 +3,10 @@ package facebook;
 import core.DriverManage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import net.serenitybdd.junit.runners.SerenityRunner;
-import org.junit.runner.RunWith;
 import pages.StartPage;
 import org.apache.log4j.BasicConfigurator;
 import org.junit.Test;
 
-@RunWith(SerenityRunner.class)
 public class FacebookTest {
     @Before
     public void basicConfigure() {
@@ -24,8 +21,7 @@ public class FacebookTest {
     @Test
     public void firstTest() {
 
-        String alertMessageRu = "Эл. адрес или номер телефона, который вы указали, не соответствует ни одному аккаунту.";
-        String alertMessageUS = "The email or phone number you’ve entered doesn’t match any account.";
+        String expectedErrorMessage = "The email or mobile number you entered isn’t connected to an account. Find your account and log in.";
 
         new StartPage()
                 .navigateTo("https://www.google.com")
@@ -34,6 +30,6 @@ public class FacebookTest {
                 .checkThatPageURLCorrect("https://www.facebook.com/")
                 .login("badLogin", "badPassword")
                 .clickLoginButton()
-                .checkThatAlertIsCorrect(alertMessageRu);
+                .checkThatErrorMessageIsCorrect(expectedErrorMessage);
     }
 }

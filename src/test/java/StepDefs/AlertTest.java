@@ -39,6 +39,6 @@ public class AlertTest {
 
     @Then("message {string} is displayed.")
     public void messageIsDisplayed(String expectedAlertMessage) {
-        new FailedAuthorizationPage().checkThatAlertIsCorrect(expectedAlertMessage);
+        new FailedAuthorizationPage().checkThatErrorMessageIsCorrect(expectedAlertMessage);
     }
 }

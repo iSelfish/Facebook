@@ -7,9 +7,9 @@ import static core.DriverManage.getDriver;
 
 public class FacebookPage {
 
-    private By inputEmail = By.id("email");
-    private By inputPassword = By.id("pass");
-    private By loginButton = By.xpath("//input[@data-testid='royal_login_button']");
+    private final By inputEmail = By.id("email");
+    private final By inputPassword = By.id("pass");
+    private final By loginButton = By.name("login");
 
     public FacebookPage checkThatPageURLCorrect(String expectedUrl) {
         String url = getDriver().getCurrentUrl();
